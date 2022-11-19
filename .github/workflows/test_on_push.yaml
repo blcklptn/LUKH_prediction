@@ -8,16 +8,16 @@ on:
 jobs:
     run_tests:
         runs-on: [ubuntu-latest]
-        steps:
-            - uses: actions/checkout@master
-            - uses: actions/setup-python@v1
-            with:
-                - python-version: 3.8
-                - architecture: 'x64'
-            - name: install requirements
-            run: pip install -r requirements
-            - name: run tests
-            run: coverage run src/tests.py
-            - name: test reports
-            run: coverage report
-            
+    steps:
+        - uses: actions/checkout@master
+        - uses: actions/setup-python@v1
+        with:
+            - python-version: 3.8
+            - architecture: 'x64'
+        - name: install requirements
+        run: pip install -r requirements
+        - name: run tests
+        run: coverage run src/tests.py
+        - name: test reports
+        run: coverage report
+
